@@ -4,6 +4,9 @@ import os
 
 def transcribe(i, o):
 
+	if not os.path.exists(i):
+		raise FileExistsError("Input path not valid.")
+
 	if not os.path.isdir(o): # If dir doesnt exist, create.
 		os.mkdir(o)
 
@@ -16,8 +19,6 @@ def transcribe(i, o):
 		headers = re[0]
 
 		for row in re[1:]: # Loop through rows
-
-
 
 			with open(f'{o}/{row[0]}.txt', mode="w+") as file: # Create text file in that directory with name as first row
 
