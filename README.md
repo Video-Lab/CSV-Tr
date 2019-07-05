@@ -17,6 +17,4 @@ csv_transcriber.transcribe('./data.csv', './users/')
 ```
 
 ## License
-A short snippet describing the license (MIT, Apache etc)
-
 MIT © Jad Khalili 2019.
